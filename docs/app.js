@@ -18,12 +18,14 @@ var comment = [];
 for (var i = 0; i < tableData.length; i++) {
 
   // Add each score to the ratings count
-  dateTime.push(tableData[i].slice(0));
-  city.push(tableData[i].slice(1));
-  state.push(tableData[i].slice(2));
-  country.push(tableData[i].slice(3));
-  shape.push(tableData[i].slice(4));
-  comment.push(tableData[i].slice(5));
+  var arrays = tableData[i].split(":")
+
+  dateTime.push(array[1]);
+  city.push(array[3]);
+  state.push(array[5]);
+  country.push(array[7]);
+  shape.push(array[9]);
+  comment.push(array[11]);
 
 }
 
