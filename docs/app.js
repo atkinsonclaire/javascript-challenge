@@ -22,4 +22,16 @@ for (var i = 0; i < tableData.length; i++) {
   comment.push(array[11]);
 
 }
+console.log("Date:");
+console.log(dateTime);
+console.log("City:");
+console.log(city);
+console.log("State:");
+console.log(state);
+console.log("Country:");
+console.log(country);
+console.log("Shape:");
+console.log(shape);
+console.log("Comment:");
+console.log(comment);
 
