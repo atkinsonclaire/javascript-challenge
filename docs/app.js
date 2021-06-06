@@ -39,3 +39,14 @@ console.log(country);
 console.log(shape);
 console.log(comment);
 
+function searchMatch(match) {
+  // return player.madeTeam == true;
+  // A more concise way to express a boolean conditional
+  return match.datetime;
+}
+
+// Call the custom function with filter()
+var dateEntered = data.filter(searchMatch);
+
+// Display the results
+console.log(dateEntered);
