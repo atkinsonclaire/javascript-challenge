@@ -7,19 +7,30 @@ var country = [];
 var shape = [];
 var comment = [];
 
-for (var i = 0; i < tableData.length; i++) {
+data.forEach((data) => {
 
-  var obs = tableData[i]
-  var array = Object.values(obs)
+  Object.entries(data).forEach(([key, value]) => {
 
-  dateTime.push(array[0]);
-  city.push(array[1]);
-  state.push(array[2]);
-  country.push(array[3]);
-  shape.push(array[4]);
-  comment.push(array[5]);
-
-}
+    if (key === "datetime") {
+      dateTime.push(value);
+    }
+    else if (key === "city") {
+      city.push(value);
+    }
+    else if (key === "state") {
+      state.push(value);
+    }
+    else if (key === "country") {
+      country.push(value);
+    }
+    else if (key === "shape") {
+      shape.push(value);
+    }
+    else {
+      comment.push(value);
+    }
+   });
+});
 
 console.log(dateTime);
 console.log(city);
@@ -27,3 +38,4 @@ console.log(state);
 console.log(country);
 console.log(shape);
 console.log(comment);
+
