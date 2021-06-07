@@ -1,4 +1,5 @@
 var tableData = data;
+var tbody = d3.select("tbody");
 
 var dateTime = [];
 var city = [];
@@ -7,9 +8,9 @@ var country = [];
 var shape = [];
 var comment = [];
 
-data.forEach((data) => {
+tableData.forEach((tableData) => {
 
-  Object.entries(data).forEach(([key, value]) => {
+  Object.entries(tableData).forEach(([key, value]) => {
 
     if (key === "datetime") {
       dateTime.push(value);
