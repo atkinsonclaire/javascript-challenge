@@ -26,5 +26,5 @@ function runEnter() {
 
   var inputValue = inputElement.property("value");
   var filteredData = ufo.filter(view => view.datetime === inputValue);
-  console.log(filteredData);
 };
+  console.log(filteredData);
