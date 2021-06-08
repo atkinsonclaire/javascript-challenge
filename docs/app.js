@@ -13,10 +13,10 @@ data.forEach(function(ufoSighting) {
   
 var ufo = data;
 var button = d3.select("#filter-btn");
-var form = d3.select("#form");
+var filter_form = d3.select("#filters");
 
 button.on("click", runEnter);
-form.on("submit", runEnter);
+filter_form.on("submit", runEnter);
 
 function runEnter() {
 
