@@ -30,4 +30,4 @@ function runEnter() {
   console.log(ufo);
   var filteredData = ufo.filter(view => view.datetime === inputValue);
   console.log(filteredData);
-}
+};
