@@ -25,9 +25,6 @@ function runEnter() {
   var inputElement = d3.select("#datetime");
 
   var inputValue = inputElement.property("value");
-
-  console.log(inputValue);
-  console.log(ufo);
   var filteredData = ufo.filter(view => view.datetime === inputValue);
   console.log(filteredData);
 };
