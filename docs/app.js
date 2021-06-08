@@ -1,12 +1,5 @@
 var tbody = d3.select("tbody");
 
-var dateTime = [];
-var city = [];
-var state = [];
-var country = [];
-var shape = [];
-var comment = [];
-
 data.forEach(function(ufoSighting) {
   console.log(ufoSighting);
   var row = tbody.append("tr");
@@ -18,3 +11,22 @@ data.forEach(function(ufoSighting) {
   });
 });
   
+var button = d3.select("#button");
+
+var form = d3.select("#form");
+
+button.on("click", runEnter);
+form.on("submit",runEnter);
+
+function runEnter() {
+
+  d3.event.preventDefault();
+
+  var inputElement = d3.select("#datetime");
+
+  var inputValue = inputElement.property("value");
+
+  console.log(inputValue);
+  var filteredData = data.filter(ufoSighting => ufoSighting.datetime === inputValue);
+  console.log(filteredData);
+}
