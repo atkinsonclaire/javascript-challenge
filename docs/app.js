@@ -13,10 +13,10 @@ data.forEach(function(ufoSighting) {
   
 var ufo = data;
 var button = d3.select("#filter-btn");
-var filter_form = d3.select("#filters");
+var form = d3.select("#form");
 
 button.on("click", runEnter);
-filter_form.on("submit", runEnter);
+form.on("submit", runEnter);
 
 function runEnter() {
 
@@ -27,4 +27,4 @@ function runEnter() {
   var inputValue = inputElement.property("value");
   var filteredData = ufo.filter(view => view.datetime === inputValue);
 };
-  console.log(filteredData);
+console.log(filteredData);
